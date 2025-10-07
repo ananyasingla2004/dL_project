@@ -1,0 +1,11 @@
+# Tree segmentation dataset configuration
+path: /Users/ananyasingla/Downloads/PLAKSHA/SEM 5/DL/DL_Project/yolo_dataset  # dataset root dir
+train: train/images  # train images (relative to 'path')
+val: val/images  # val images (relative to 'path')
+
+# Classes
+names:
+  0: individual_tree
+  1: group_of_trees
+
+nc: 2  # number of classes

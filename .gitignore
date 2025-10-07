@@ -1,0 +1,6 @@
+.venv
+*.tif
+*.jpg
+*.png
+.DS_Store
+*.txt
