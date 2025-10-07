@@ -162,7 +162,7 @@ def main():
     
     # Paths
     evaluation_images_dir = "/Users/ananyasingla/Downloads/PLAKSHA/SEM 5/DL/DL_Project/evaluation_images"
-    output_path = "/Users/ananyasingla/Downloads/PLAKSHA/SEM 5/DL/DL_Project/predictions.json"
+    output_path = "/Users/ananyasingla/Downloads/PLAKSHA/SEM 5/DL/DL_Project/optimized_predictions.json"
     
     # Model path - update this after training
     model_path = "/Users/ananyasingla/Downloads/PLAKSHA/SEM 5/DL/DL_Project/runs/segment/tree_segmentation2/weights/best.pt"
@@ -183,9 +183,9 @@ def main():
     # Run inference
     inference = YOLOInference(model_path, evaluation_images_dir, output_path)
     
-    # You can adjust these thresholds based on your needs
-    confidence_threshold = 0.25  # Minimum confidence score
-    iou_threshold = 0.45         # IoU threshold for NMS
+    # OPTIMIZED thresholds based on threshold optimization results
+    confidence_threshold = 0.1   # Optimized: Lower threshold for more detections
+    iou_threshold = 0.6          # Optimized: Higher IoU for better precision
     
     results = inference.run_inference(confidence_threshold, iou_threshold)
     

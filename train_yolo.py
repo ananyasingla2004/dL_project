@@ -30,7 +30,7 @@ def train_yolo_model():
     # Training parameters
     results = model.train(
         data=yaml_path,           # Path to dataset YAML
-        epochs=10,                # Number of training epochs (set to 10 for submission)
+        epochs=25,                # Number of training epochs (set to 10 for submission)
         imgsz=640,                # Image size
         batch=4,                  # Batch size (reduced for CPU)
         device='mps',             # Use Metal Performance Shaders (MPS) on Mac
